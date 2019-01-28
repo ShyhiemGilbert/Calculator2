@@ -6,10 +6,20 @@
 
 $(document).ready(function () {
 
+    //e is the element
     //whenever something is clicked, this function needs to be performed
-    $(".keypad").click(function () {
+    $(".keypad").click(function (e) {
 
-        alert("hello");
+        //To find the value that the button will give when pressed
+        //use debugger + consolelog to find current target and innerHtml
+        //debugger;
+        //console.log(e);
+        //We have this value, now we need to put it in (id=result)
+        var value = e.currentTarget.innerHTML;
+        var result = $("#result").val();
+
+        result = result + value;
+        $("#result").val(result);
     });
 });
 
