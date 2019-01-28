@@ -1,7 +1,9 @@
-﻿
+﻿`
 @{
     ViewBag.Title = "Index";
 }
+
+<script src="~/Scripts/Calculator/Calculator.js"></script>
 
 <h2>Calculator</h2>
 <div class="container">
@@ -9,31 +11,31 @@
         <div class="col-sm-12">
             <input type="text" id="result" style="max-width: 1920px !important; width: 100%;" />
             <div id="keyPad">
-                <span id="clear" class="col-sm-3 btn btn-primary pull-right">CE</span>
+                <span id="clear" class="col-sm-3 btn btn-primary pull-right" style="margin-top: 10px; margin-bottom: 10px">CE</span>
                 <div class="clearfix"></div>
                 @* 1st Row *@
-                <span id="num7" class="col-sm-3 btn btn-default">7</span>
-                <span id="num8" class="col-sm-3 btn btn-default">8</span>
-                <span id="num9" class="col-sm-3 btn btn-default">9</span>
-                <span id="opDiv" class="col-sm-3 btn btn-danger">/</span>
+                <span id="num7" class="keypad col-sm-3 btn btn-default">7</span>
+                <span id="num8" class="keypad col-sm-3 btn btn-default">8</span>
+                <span id="num9" class="keypad col-sm-3 btn btn-default">9</span>
+                <span id="opDiv" class="keypad col-sm-3 btn btn-danger">/</span>
                 @* 2nd Row *@
-                <span id="num4" class="col-sm-3 btn btn-default">4</span>
-                <span id="num5" class="col-sm-3 btn btn-default">5</span>
-                <span id="num6" class="col-sm-3 btn btn-default">6</span>
-                <span id="opMul" class="col-sm-3 btn btn-danger">*</span>
+                <span id="num4" class="keypad col-sm-3 btn btn-default">4</span>
+                <span id="num5" class="keypad col-sm-3 btn btn-default">5</span>
+                <span id="num6" class="keypad col-sm-3 btn btn-default">6</span>
+                <span id="opMul" class="keypad col-sm-3 btn btn-danger">*</span>
 
 
                 @* 3th Row *@
-                <span id="num1" class="col-sm-3 btn btn-default">1</span>
-                <span id="num2" class="col-sm-3 btn btn-default">2</span>
-                <span id="num3" class="col-sm-3 btn btn-default">3</span>
-                <span id="opSub" class="col-sm-3 btn btn-danger">-</span>
+                <span id="num1" class="keypad col-sm-3 btn btn-default">1</span>
+                <span id="num2" class="keypad col-sm-3 btn btn-default">2</span>
+                <span id="num3" class="keypad col-sm-3 btn btn-default">3</span>
+                <span id="opSub" class="keypad col-sm-3 btn btn-danger">-</span>
 
                 @* 3th Row *@
-                <span id="num0" class="col-sm-3 btn btn-default">0</span>
-                <span id="dec" class="col-sm-3 btn btn-default">.</span>
-                <span id="opAdd" class="col-sm-3 btn btn-danger">+</span>
-                <span id="equals" class="col-sm-3 btn btn-success">=</span>
+                <span id="num0" class="keypad col-sm-3 btn btn-default">0</span>
+                <span id="dec" class="keypad col-sm-3 btn btn-default">.</span>
+                <span id="opAdd" class="keypad col-sm-3 btn btn-danger">+</span>
+                <span id="equals" class="keypad col-sm-3 btn btn-success">=</span>
 
             </div>
         </div>
