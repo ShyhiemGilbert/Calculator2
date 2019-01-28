@@ -16,10 +16,20 @@ $(document).ready(function () {
         //console.log(e);
         //We have this value, now we need to put it in (id=result)
         var value = e.currentTarget.innerHTML;
-        var result = $("#result").val();
+        //When i press equal button i want the answer, not input into the box
+        //Create a  condition that if input is not equal to = then follow function 
+        if (value != "=") {
 
-        result = result + value;
-        $("#result").val(result);
+
+            var result = $("#result").val();
+
+            result = result + value;
+            $("#result").val(result);
+        }
+        else
+        {
+            return false;
+        }
     });
 });
 
