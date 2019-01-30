@@ -25,16 +25,21 @@ $(document).ready(function () {
                     $("#oldOperator").val(value);
                 } //($.trim(oldOp) 
                 else {
-                    if ($.trim(newOp) == "") {
+                    if ($.trim(newOp) == "" || newOp == undefined) {
                         if ($.trim(op2) == "") {
                             alert("You are entering an operator when an operand is expected.");
-                       
+
                             return false;
                         } else {
                             $("#newOperator").val(value);
                         }
                     } //($.trim(newOp)
-                    
+                    else {
+
+                        //Make the Ajax call and pass the parameters to controller
+                        //and populate the result textbox with result returned from controller
+
+                    }
                 } //else
             } //$.inArray(value, operators
             else { //Button pressed is an number
