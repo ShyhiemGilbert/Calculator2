@@ -130,12 +130,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\3d-golden-numbers-texture-and-math-symbol-animation-spinning-in-black-isolated-alpha-background-in-4k-ultra-hd_rmd5oisz__F0010.png" />
+    <Content Include="Content\Images\maths_bg.jpg" />
+    <Content Include="Content\Images\Scientist-Math-Psychics-Magnet-science-HD-wallpaper-background.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\Calculator2.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Calculator\Calculator.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
