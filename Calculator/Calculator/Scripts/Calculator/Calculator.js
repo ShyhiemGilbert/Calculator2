@@ -1,42 +1,55 @@
-﻿$(document).ready(function ()
-{
-$(".keypad").click(function(e) {
-    debugger;
-    var value = e.currentTarget.innerHTML;
-    if (value != "=") {
-        var result = $("#result").val();
-        result = result + value;
-        $("#result").val(result);
+﻿
+$(document).ready(function () {
+    $(".keypad").click(function(e) {
+        debugger;
+        var value = e.currentTarget.innerHTML;
+        if (value != "=") {
+            var result = $("#result").val();
+            result = result + value;
+            $("#result").val(result);
 
-        //Logic to populate the new text box
-        var operators = ["+", "-", "*", "/"];
-        var oldOp = $("#oldOperator").val();
-        var op1 = $("#op1").val();
-        var op2 = $("#op2").val();
-        if ($.inArray(value, operators) != -1) {
-            //Button pressed is an operator
-            $("#oldOperator").val(value);
-        } //$.inArray(value, operators
+            //Logic to populate the new text box
+            var operators = ["+", "-", "*", "/"];
+            var oldOp = $("#oldOperator").val();
+            var newOp = $("#newOperator").val();
+            var op1 = $("#op1").val();
+            var op2 = $("#op2").val();
 
-        else { //Button pressed is an number
-            if (oldOp == undefined || $.trim(oldOp) == "") {
-                //This is op1
-                //We will concatenate this number to op1 and not replace since we can have multiple digit number
-                $("#op1").val(op1 +value);
-            } //(oldOp == undefined
+            if ($.inArray(value, operators) != -1) {
+                if ($.trim(op1) == "")
+                    alert("You are entering an operator when an operand is expected.");
+                //Button pressed is an operator
+                if ($.trim(oldOp) == "") {
+                    $("#oldOperator").val(value);
+                } //($.trim(oldOp) 
+                else {
+                    if ($.trim(newOp) == "") {
+                        if ($.trim(op2) == "")
+                            alert("You are entering an operator when an operand is expected.");
+                    } //($.trim(newOp)
+                    else {
+                        $("#newOperator").val(value);
+                    }
+                } //else
+            } //$.inArray(value, operators
+            else { //Button pressed is an number
+                if (oldOp == undefined || $.trim(oldOp) == "") {
+                    //This is op1
+                    //We will concatenate this number to op1 and not replace since we can have multiple digit number
+                    $("#op1").val(op1 + value);
+                } //(oldOp == undefined
+                else {
+                    //Thisis op2
+                    $("#op2").val(op2 + value);
 
-            else {
-                //Thisis op2
-                $("#op2").val(op2 + value);
+                }
 
-            }
+            } //else { //Button pressed is an number
 
-        }//else { //Button pressed is an number
-
-    } //if(value !=...)
-
-    else {
-        return false;
-    }//return false
-})//keypadClickFunction
-})//documentReadyFunction
+        } //if(value !=...)
+        else {
+            return false;
+        } //return false
+       
+    }); //keypadClickFunction
+});//documentReadyFunction
