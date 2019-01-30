@@ -30,11 +30,11 @@ $(document).ready(function () {
                             alert("You are entering an operator when an operand is expected.");
                        
                             return false;
+                        } else {
+                            $("#newOperator").val(value);
                         }
                     } //($.trim(newOp)
-                    else {
-                        $("#newOperator").val(value);
-                    }
+                    
                 } //else
             } //$.inArray(value, operators
             else { //Button pressed is an number
