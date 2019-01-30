@@ -13,5 +13,10 @@ namespace Calculator.Controllers
         {
             return View();
         }
+
+        public JsonResult Evaluate(float first, float second, string oper)
+        {
+
+        }
     }
 }

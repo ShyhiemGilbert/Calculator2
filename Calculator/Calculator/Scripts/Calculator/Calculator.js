@@ -1,4 +1,18 @@
-﻿
+﻿function Eval(op1, op2, oldOp, newOp) {
+    $.ajax({
+    method: "POST",
+        url:"/Calculator/Evaluate",
+        data:{first: op1, second:op2, oper:oldOp},
+    success: function(result) {
+        $("#op1").val(result);
+        $("#op2").val("");
+        debugger;
+        $("#oldOperator").val(newOp);
+        $("#newOperator").val("");
+        $("#result").val(result + newOp);
+        }
+    })
+}
 $(document).ready(function () {
     $(".keypad").click(function(e) {
         debugger;
