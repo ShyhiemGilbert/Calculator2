@@ -6,7 +6,7 @@ $(document).ready(function () {
         if (value != "=") {
             var result = $("#result").val();
             result = result + value;
-            $("#result").val(result);
+          
 
             //Logic to populate the new text box
             var operators = ["+", "-", "*", "/"];
@@ -16,16 +16,21 @@ $(document).ready(function () {
             var op2 = $("#op2").val();
 
             if ($.inArray(value, operators) != -1) {
-                if ($.trim(op1) == "")
+                if ($.trim(op1) == "") {
                     alert("You are entering an operator when an operand is expected.");
+                    return false;
+                }
                 //Button pressed is an operator
                 if ($.trim(oldOp) == "") {
                     $("#oldOperator").val(value);
                 } //($.trim(oldOp) 
                 else {
                     if ($.trim(newOp) == "") {
-                        if ($.trim(op2) == "")
+                        if ($.trim(op2) == "") {
                             alert("You are entering an operator when an operand is expected.");
+                       
+                            return false;
+                        }
                     } //($.trim(newOp)
                     else {
                         $("#newOperator").val(value);
@@ -45,7 +50,8 @@ $(document).ready(function () {
                 }
 
             } //else { //Button pressed is an number
-
+            
+            $("#result").val(result); //if there is nothing in op1, we should not move forward
         } //if(value !=...)
         else {
             return false;
